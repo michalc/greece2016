@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Greece 2016</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 41.876, lng: -87.624}
+        });
+
+        // Google Maps fetches the kml from their servers,
+        // so it must be on a publically accessible URL
+        var host = 'http://greece2016.charemza.name/'
+
+        var layer1 = new google.maps.KmlLayer({
+          url: host + 'track-1.kml',
+          map: map
+        });
+
+        var layer2 = new google.maps.KmlLayer({
+          url: host + 'track-2.kml',
+          map: map
+        });
+
+        var layer3 = new google.maps.KmlLayer({
+          url: host + 'track-3.kml',
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEfegpC6GgGSpvRf9tj9VXrPZhlzQR0C8&callback=initMap">
+    </script>
+  </body>
+</html>
