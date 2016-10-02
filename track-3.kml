@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
     <Document>
         <open>0</open>
-        <ScreenOverlay>
+<!--         <ScreenOverlay>
             <name>Navionics</name>
             <Icon>
                 <href>https://social-sharing.navionics.io/images/fb_sharing/kmz_navionics_logo.png</href>
@@ -11,10 +11,10 @@
             <screenXY x="0" y="1" xunits="fraction" yunits="fraction" />
             <rotationXY yunits="fraction" xunits="fraction" y="0" x="0" />
             <size yunits="fraction" xunits="fraction" y="0" x="0" />
-        </ScreenOverlay>
+        </ScreenOverlay> -->
         <Style id="TrackStyle">
             <LineStyle>
-                <width>6.0</width>
+                <width>3.0</width>
                 <color>ff2cdffb</color>
             </LineStyle>
         </Style>
